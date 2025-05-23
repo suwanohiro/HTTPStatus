@@ -1,0 +1,32 @@
+{
+  "name": "swn-http-status",
+  "version": "1.0.0",
+  "description": "HTTPステータスコードをマジックナンバー化せずに扱えるシンプルなクラス。",
+  "main": "dist/HTTPStatus.js",
+  "types": "dist/HTTPStatus.d.ts",
+  "exports": {
+    "import": "./dist/HTTPStatus.js",
+    "require": "./dist/HTTPStatus.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suwanohiro/HTTPStatus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suwanohiro/HTTPStatus/issues"
+  },
+  "homepage": "https://github.com/suwanohiro/HTTPStatus#readme",
+  "keywords": [
+    "http",
+    "status",
+    "codes",
+    "http-status",
+    "http-status-codes",
+    "HTTPStatus"
+  ],
+  "author": "suwanohiro",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}
