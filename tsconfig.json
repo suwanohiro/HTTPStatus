@@ -1,8 +1,10 @@
 {
     "compilerOptions": {
+        "composite": true,
         "declaration": true,
         "emitDeclarationOnly": false,
         "outDir": "./dist",
+        "rootDir": ".",
         "target": "ES2015",
         "module": "ESNext",
         "esModuleInterop": true,
@@ -11,6 +13,11 @@
         "skipLibCheck": true
     },
     "include": [
-        "src"
+        "src/HTTPStatus.ts"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.cjs.json"
+        }
     ]
 }

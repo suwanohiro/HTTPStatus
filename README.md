@@ -10,6 +10,9 @@ npm でパッケージをインストールできます。
 npm install swn-http-status
 ```
 
+> [!TIP]
+> TypeScript プロジェクトでは型定義ファイル（`.d.ts`）も自動的に利用されます。
+
 ## 使い方
 
 ### TypeScript の場合
@@ -40,6 +43,9 @@ const HTTPStatus = require("swn-http-status");
 console.log(HTTPStatus.default.OK); // 200
 console.log(HTTPStatus.default.NotFound); // 404
 ```
+
+> [!NOTE]
+> CommonJS で利用する場合は `require("swn-http-status").default` のように `.default` を付けてアクセスしてください。
 
 ## HTTP ステータスコード一覧
 
@@ -112,12 +118,11 @@ console.log(HTTPStatus.default.NotFound); // 404
 
 ## 更新履歴
 
-- **1.0.1**
-
-  - README の「使い方」で、ESModules と CommonJS の場合を分けて記載
-
-- **1.0.0**
-  - 初回リリース
+| バージョン |    日付    | 主な変更点                                                                                                                                                                                                                                            |
+| :--------: | :--------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1.0.2    | 2025-05-23 | <ul><li>ビルド成果物の配置と npm scripts を整理し、ESModule と CommonJS 両対応をより明確に</li><li><code>dist/src/</code> 配下に ESM・CJS 両方のエントリポイントを配置</li><li><code>package.json</code> の <code>exports</code> 設定を修正</li></ul> |
+|   1.0.1    | 2025-05-22 | <ul><li>README の「使い方」で、ESModules と CommonJS の場合を分けて記載</li></ul>                                                                                                                                                                     |
+|   1.0.0    | 2025-05-21 | <ul><li>初回リリース</li></ul>                                                                                                                                                                                                                        |
 
 ## ライセンス
 

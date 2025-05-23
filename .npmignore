@@ -1,0 +1,11 @@
+src/
+dist-cjs/
+node_modules/
+tsconfig.json
+tsconfig.cjs.json
+tsconfig.tsbuildinfo
+README.md~
+*.log
+.vscode/
+.git/
+*.map

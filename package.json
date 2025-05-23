@@ -1,12 +1,13 @@
 {
   "name": "swn-http-status",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "HTTPステータスコードをマジックナンバー化せずに扱えるシンプルなクラス。",
-  "main": "dist/HTTPStatus.js",
-  "types": "dist/HTTPStatus.d.ts",
+  "main": "dist/src/HTTPStatus.cjs",
+  "module": "dist/src/HTTPStatus.js",
+  "types": "dist/src/HTTPStatus.d.ts",
   "exports": {
-    "import": "./dist/HTTPStatus.js",
-    "require": "./dist/HTTPStatus.js"
+    "import": "./dist/src/HTTPStatus.js",
+    "require": "./dist/src/HTTPStatus.cjs"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,11 @@
   "license": "MIT",
   "engines": {
     "node": ">=14"
+  },
+  "scripts": {
+    "clean": "rmdir /S /Q dist dist-cjs 2>nul || exit 0",
+    "build:esm": "npm run clean && tsc --project tsconfig.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json && move /Y dist-cjs\\src\\HTTPStatus.js dist\\src\\HTTPStatus.cjs",
+    "build": "npm run build:esm && npm run build:cjs"
   }
 }
