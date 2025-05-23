@@ -21,17 +21,24 @@ console.log(HTTPStatus.OK); // 200
 console.log(HTTPStatus.NotFound); // 404
 ```
 
-### JavaScript の場合
+### JavaScript (ESModules) の場合
 
 ```javascript
-// CommonJS
-const HTTPStatus = require("swn-http-status");
-
 // ES Modules
 import HTTPStatus from "swn-http-status";
 
 console.log(HTTPStatus.OK); // 200
 console.log(HTTPStatus.NotFound); // 404
+```
+
+### JavaScript の場合 (CommonJS)
+
+```javascript
+// CommonJS
+const HTTPStatus = require("swn-http-status");
+
+console.log(HTTPStatus.default.OK); // 200
+console.log(HTTPStatus.default.NotFound); // 404
 ```
 
 ## HTTP ステータスコード一覧
@@ -102,6 +109,15 @@ console.log(HTTPStatus.NotFound); // 404
 |    508 | LoopDetected                  | サーバーが無限ループを検出しました。                                                                              |
 |    510 | NotExtended                   | 拡張が必要です。                                                                                                  |
 |    511 | NetworkAuthenticationRequired | ネットワーク認証が必要です。                                                                                      |
+
+## 更新履歴
+
+- **1.0.1**
+
+  - README の「使い方」で、ESModules と CommonJS の場合を分けて記載
+
+- **1.0.0**
+  - 初回リリース
 
 ## ライセンス
 

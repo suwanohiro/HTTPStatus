@@ -1,6 +1,6 @@
 {
   "name": "swn-http-status",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HTTPステータスコードをマジックナンバー化せずに扱えるシンプルなクラス。",
   "main": "dist/HTTPStatus.js",
   "types": "dist/HTTPStatus.d.ts",
