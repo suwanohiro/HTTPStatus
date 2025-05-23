@@ -1,0 +1,2 @@
+# HTTPStatus
+日本語の説明付きでHTTPステータスコードをクラスとして提供するTypeScript/JavaScriptライブラリです。 ES Modules・CommonJS両対応、JSDocコメントによる補完・ドキュメントも充実しています。
