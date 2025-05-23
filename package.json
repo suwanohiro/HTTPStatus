@@ -35,5 +35,11 @@
     "build:esm": "npm run clean && tsc --project tsconfig.json",
     "build:cjs": "tsc --project tsconfig.cjs.json && move /Y dist-cjs\\src\\HTTPStatus.js dist\\src\\HTTPStatus.cjs",
     "build": "npm run build:esm && npm run build:cjs"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
   }
 }
