@@ -120,6 +120,7 @@ console.log(HTTPStatus.NotFound); // 404
 
 | バージョン |    日付    | 主な変更点                                                                                                                                                                                                                                            |
 | :--------: | :--------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1.0.5    | 2025-06-10 | <ul><li>HTTP ステータスコードから名前を取得できる <code>HTTPStatus.Name(statusCode: number): string \| undefined</code> 静的メソッドを追加</li><li>全コード・全名称の相互変換テストを追加</li>                                                        |
 |   1.0.4    | 2025-05-23 | <ul><li>CommonJS での利用方法を <code>HTTPStatus.default.OK</code> から <code>HTTPStatus.OK</code> へ変更</li></ul>                                                                                                                                   |
 |   1.0.3    | 2025-05-23 | <ul><li>ESModule 対応関連の修正を行いました</li></ul>                                                                                                                                                                                                 |
 |   1.0.2    | 2025-05-23 | <ul><li>ビルド成果物の配置と npm scripts を整理し、ESModule と CommonJS 両対応をより明確に</li><li><code>dist/src/</code> 配下に ESM・CJS 両方のエントリポイントを配置</li><li><code>package.json</code> の <code>exports</code> 設定を修正</li></ul> |

@@ -25,3 +25,25 @@ describe("HTTPStatus (ESModule)", () => {
         expect(codeToName[code]).toBe(name);
     });
 });
+
+// getterのみを対象に全件テスト
+describe("HTTPStatus.Name", () => {
+    test.each(
+        Object.getOwnPropertyNames(HTTPStatus)
+            .filter(name =>
+                !exclude.includes(name) &&
+                typeof Object.getOwnPropertyDescriptor(HTTPStatus, name)?.get === "function"
+            )
+            .map(name => [name, HTTPStatus[name]])
+    )("HTTPStatus.Name(HTTPStatus.%s) === '%s'", (name, code) => {
+        expect(HTTPStatus.Name(code)).toBe(name);
+    });
+
+    test("未定義コードはundefined", () => {
+        expect(HTTPStatus.Name(999)).toBeUndefined();
+    });
+
+    test("NaNはundefinedを返す", () => {
+        expect(HTTPStatus.Name(NaN)).toBeUndefined();
+    });
+});

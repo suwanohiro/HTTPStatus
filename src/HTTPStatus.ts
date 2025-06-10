@@ -1,5 +1,17 @@
 class HTTPStatus {
     /**
+     * @brief HTTPステータスコードの名前を取得します。
+     * @details このメソッドは、HTTPステータスコードに対応する名前を返します。
+     * @param statusCode - HTTPステータスコード
+     * @returns ステータスコードに対応する名前、または未定義
+     */
+    static Name(statusCode: number): string | undefined {
+        return Object.getOwnPropertyNames(HTTPStatus)
+            .filter(name => typeof Object.getOwnPropertyDescriptor(HTTPStatus, name)?.get === "function")
+            .find(name => (HTTPStatus as any)[name] === statusCode);
+    }
+
+    /**
      * @brief 100 Continue
      * @details サーバーはリクエストヘッダーを受信し、クライアントはリクエストを続行できます。
      */
